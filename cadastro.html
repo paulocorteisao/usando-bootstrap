@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscrição | Centro de Formação Horizonte</title>
+
+    <link rel="stylesheet" href="inscricao.css">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #142B4A;
+}
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e8edf2;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #142B4A;
+}
+
+.logo span {
+    color: #2563EB;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.back-link:hover {
+    color: #2563EB;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.main {
+    max-width: 850px;
+    margin: 55px auto;
+    padding: 0 20px;
+}
+
+/* INTRODUÇÃO */
+
+.intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e5edff;
+    color: #2563EB;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #142B4A;
+}
+
+.intro p {
+    color: #687386;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: auto;
+    font-size: 15px;
+}
+
+/* FORMULÁRIO */
+
+.form-container {
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #e8edf2;
+    box-shadow: 0 8px 30px rgba(20, 43, 74, 0.05);
+}
+
+.form-heading {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.form-heading h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.form-heading p {
+    color: #7b8492;
+    font-size: 14px;
+}
+
+/* CAMPOS */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #263b55;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dce2e9;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #142B4A;
+    background: #fff;
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a0a8b3;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* INFORMAÇÃO */
+
+.form-info {
+    background: #f0f5ff;
+    color: #405b80;
+    padding: 15px;
+    border-left: 3px solid #2563EB;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 25px;
+}
+
+/* BOTÃO */
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #2563EB;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 22px;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    background: #142B4A;
+    transform: translateY(-2px);
+}
+
+.privacy {
+    text-align: center;
+    color: #929aa6;
+    font-size: 12px;
+    margin-top: 17px;
+}
+
+/* RODAPÉ */
+
+.footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #8993a1;
+    font-size: 13px;
+    border-top: 1px solid #e8edf2;
+    background: #fff;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .main {
+        margin: 35px auto;
+    }
+
+    .header-content {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .form-container {
+        padding: 22px 17px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .form-heading h2 {
+        font-size: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                Horizonte<span>.</span>
+            </a>
+
+            <a href="index.html" class="back-link">
+                ← Voltar à página inicial
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="intro">
+            <span class="tag">INSCRIÇÕES ABERTAS</span>
+
+            <h1>Construa o seu futuro connosco.</h1>
+
+            <p>
+                Preencha o formulário abaixo para demonstrar o seu
+                interesse em frequentar um dos nossos cursos.
+                A nossa equipa entrará em contacto consigo.
+            </p>
+        </section>
+
+        <section class="form-container">
+
+            <div class="form-heading">
+                <h2>Ficha de inscrição</h2>
+                <p>Preencha os seus dados correctamente.</p>
+            </div>
+
+            <form action="#" method="POST">
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite o seu nome completo"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Endereço de e-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemplo@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Número de telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="+244 9XX XXX XXX"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nascimento">Data de nascimento</label>
+                        <input
+                            type="date"
+                            id="nascimento"
+                            name="nascimento"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Género</label>
+                        <select id="genero" name="genero" required>
+                            <option value="">Seleccione uma opção</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="curso">Curso pretendido</label>
+                        <select id="curso" name="curso" required>
+                            <option value="">Seleccione o curso</option>
+                            <option value="electricidade">Electricidade</option>
+                            <option value="mecanica">Mecânica</option>
+                            <option value="informatica">Informática</option>
+                            <option value="barbearia">Barbearia</option>
+                            <option value="pintura">Pintura</option>
+                            <option value="canalizacao">Canalização</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="observacoes">
+                            Observações (opcional)
+                        </label>
+                        <textarea
+                            id="observacoes"
+                            name="observacoes"
+                            rows="4"
+                            placeholder="Escreva alguma informação adicional..."
+                        ></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-info">
+                    Ao enviar este formulário, manifesta o seu interesse
+                    em frequentar o curso seleccionado.
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Enviar inscrição →
+                </button>
+
+                <p class="privacy">
+                    Os seus dados serão utilizados apenas para fins de inscrição.
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Centro de Formação Horizonte. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
