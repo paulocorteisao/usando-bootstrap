@@ -1,0 +1,17 @@
+# Dependências do Node.js
+node_modules/
+
+# Ficheiros de ambiente
+.env
+.env.*
+
+# Ficheiros de logs
+*.log
+npm-debug.log*
+
+# Ficheiros do sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configurações pessoais do VS Code
+.vscode/
